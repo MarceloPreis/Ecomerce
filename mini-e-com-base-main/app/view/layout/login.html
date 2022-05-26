@@ -1,0 +1,19 @@
+<div class="container mt-5 mb-5">
+    <div class="row row-cols-auto justify-content-center g-5">
+        <form method="post" action="index.php?pg=login&act=login">
+            <div class="mb-3">
+              <label for="login" class="form-label">Login</label>
+              <input type="text" class="form-control" id="login" name="usulogin">
+            </div>
+            <div class="mb-3">
+              <label for="senha" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="senha" name="ususenha">
+            </div>
+            <div class="mb-3 form-check">
+                <a href="index.php?pg=usuario">{{msgCadastro}}</a>
+            </div>
+            {{checkAdmin}}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
