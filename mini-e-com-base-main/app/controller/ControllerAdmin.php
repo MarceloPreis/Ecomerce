@@ -17,6 +17,7 @@ class ControllerAdmin extends ControllerPadrao
         $a = $oModelProduto->getAll();
 
         $sTitle = 'Administrador';
+
         if (empty($a)) {
             $sContent = ViewAdmin::render([
                 'gridProdutos' => '<h2>Não há produtos cadastrados</h2>'
@@ -26,6 +27,8 @@ class ControllerAdmin extends ControllerPadrao
                 'tableProdutos' => ViewAdmin::tableProdutos($a)
             ]);
         }
+
+        if(empty($this->footerVars)) $this->footerVars = ['footerContent' => '<h5> Seja Bem Vindo! </h5>'];
 
         return parent::getPage(
             $sTitle,

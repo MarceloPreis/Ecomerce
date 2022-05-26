@@ -14,6 +14,8 @@ class ControllerLogin extends ControllerPadrao
     function processPage()
     {
         $oSession = new Session;
+        $sTitle = 'Login';
+
 
         if($oSession->isLogged()){
             $oSession->logout();
@@ -34,7 +36,7 @@ class ControllerLogin extends ControllerPadrao
             'checkAdmin' => ''
         ]);
 
-        $sTitle = 'Cadastro de Usuario';
+        if(empty($this->footerVars)) $this->footerVars = ['footerContent' => '<h5> Seja Bem Vindo! </h5>'];
 
         return parent::getPage(
             $sTitle,

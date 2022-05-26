@@ -37,6 +37,9 @@ class ControllerCarrinho extends ControllerPadrao
                 'tabelaCarrinho' => '<h2>Faça Login</h2>'
             ]);
         }
+
+        if(empty($this->footerVars)) $this->footerVars = ['footerContent' => '<h5> Este é o seu carrinho de compras</h5>'];
+
         return parent::getPage(
             $sTitle,
             $sContent

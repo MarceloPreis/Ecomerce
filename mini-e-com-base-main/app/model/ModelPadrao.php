@@ -33,6 +33,7 @@ abstract class ModelPadrao
 
         $sSql = "INSERT INTO " . $this->getTable() . " (" . implode(",", $colunas) . ") VALUES (" . implode(",", $valores) . ")";
 
+        echo $sSql;
         return (pg_query($oConnection, $sSql));   
     }
 

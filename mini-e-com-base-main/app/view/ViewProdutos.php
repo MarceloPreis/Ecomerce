@@ -15,7 +15,7 @@ class ViewProdutos   extends ViewPadrao
 
             <div class="col">
             <div class="card">
-                <img src="img/' . $c["proimg"] . '.png" class="card-img-top" alt="...">
+                <img src="img/' . $c["proimg"] . '.jpg" class="card-img-top" alt="..."  style=" max-width: 100%; max-height: 100%;">
                 <div class="card-body">
                     <h5 class="card-title">' . $c['pronome'] . '</h5>
                     <h6> R$ ' . $c['propreco'] . '</h6>

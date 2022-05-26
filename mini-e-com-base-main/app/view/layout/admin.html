@@ -1,8 +1,23 @@
 <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <div class="container mt-5 mb-5">
-    <a href="index.php?pg=form"><button class="btn btn-secondary"><span class="p-2"><i class="fa-thin fa-plus"></i></span>Cadastrar Produto</button></a>
+    <a href="index.php?pg=form"><button class="btn btn-secondary"><span class="p-2"><i
+                    class="fa-thin fa-plus"></i></span>Cadastrar Produto</button></a>
     <div class="row row-cols-auto justify-content-center g-5">
-        {{tableProdutos}}
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Imagem</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Preço</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Excluir</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{tableProdutos}}
+            </tbody>
+        </table>
     </div>
 </div>

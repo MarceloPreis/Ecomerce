@@ -34,6 +34,8 @@ class ControllerProdutos extends ControllerPadrao
             ]);
         }
 
+        if(empty($this->footerVars)) $this->footerVars = ['footerContent' => '<h2> Veja nossos produtos! </h2>'];
+
         return parent::getPage(
             $sTitle,
             $sContent

@@ -14,6 +14,7 @@ class ControllerForm extends ControllerPadrao
 {
     function processPage()
     {
+        $sTitle = 'Cadastro';
         $oModelProduto = new ModelProduto;
 
         if (isset($_GET['procodigo'])){
@@ -33,12 +34,8 @@ class ControllerForm extends ControllerPadrao
             'form' => ViewForm::form($produto, $act),
             'catOps' => ViewForm::catOps($cats, $produto[0]['catcodigo'])
         ]);
-        $sTitle = 'Cadastro';
 
-        $this->footerVars = [
-            // Passar aqui os parametros do footer da página
-            'footerContent' => '<h5>Welcome!</h5>'
-        ];
+        if(empty($this->footerVars)) $this->footerVars = ['footerContent' => '<h2>Cadastro/Edição de produtos</h2>'];
 
         return parent::getPage(
             $sTitle,
